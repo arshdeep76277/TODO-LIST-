@@ -1,6 +1,9 @@
 {
   "name": "todo",
   "version": "1.0.0",
+  "engine":{
+    "node": "14.x"
+  },
   "description": "TODO using mern stack",
   "main": "index.js",
   "scripts": {
@@ -9,7 +12,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": " concurrently \"npm run client\" \"npm run server\" ",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false  npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Arshdeep Singh",
   "license": "ISC",

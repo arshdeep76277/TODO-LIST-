@@ -20,8 +20,8 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.use('/api/items',items);
 
-if(process.env.NODE_ENV==='production'){
 
+if(process.env.NODE_ENV==='production'){
     //setting a static folder
     app.use(express.static('client/build'));
 
