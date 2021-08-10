@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+:root{
+    --primary-color:rgb(26, 26, 26);
+    --secondary-color:rgb(255, 252, 247);
+}
+.navbar{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+h1{
+    margin:0px;
+    padding: 10px 10px;
+}
+.menu{
+    margin-left: auto;
+    margin-right: 20px;
+}

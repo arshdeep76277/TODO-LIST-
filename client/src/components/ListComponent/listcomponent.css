@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+:root{
+    --primary-color:rgba(26,26,26,26);
+    --primary-font:'Atkinson Hyperlegible', sans-serif;
+}
+.list__components{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+.container{
+    border: solid 2px black;
+    min-height: 60%;
+    height: fit-content;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    margin-top: 50px;
+}
+.add_new_todo,form{
+    display: flex;
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 20px;
+}
+#add_todo_input{
+    outline: none;  
+    background-color: rgb(245, 245, 245);
+    border: none;
+    height: 25px;
+    flex: 1;
+    font-family: var(--primary-font);
+    
+}
+#add_todo_button{
+    margin-left: 10px;
+    color:white;
+    background-color: var(--primary-color);
+    padding:5px 15px;
+    outline:none;
+    border:none;
+    border-radius:5px;
+    font-family: var(--primary-font);
+}
+#add_todo_button:hover{
+  background-color: rgb(66, 66, 66);
+}
+.todo_item{
+    width: 100%;
+    margin:5px;
+    height: fit-content;
+    font-family: var(--primary-font);
+    padding: 0px 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+.todo_item > p{
+    width: 95%;
+    overflow-x: hidden;
+}
+
+@media screen and ( max-width: 768px) {
+    .add_new_todo {
+        margin-bottom: 10px;
+    }
+   .add_new_todo >form{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .add_new_todo >form >input{
+       width: 100%;
+       height: 40px;
+   }
+   #add_todo_button{
+    margin-top: 10px;
+    width: 100%;
+    margin-left: 0px;
+    font-size: 0.5em;
+   }
+   .todo_item{
+       font-size: 0.5em;
+   }
+    
+}
