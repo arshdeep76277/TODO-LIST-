@@ -7,11 +7,11 @@ export const getItems=(data)=>{
     }
 }
 export const deleteItems=(id)=>dispatch=>{
-    axios.delete(`http://localhost:5000/api/items/${id}`);
+    axios.delete(`/api/items/${id}`);
     dispatch({type:DELETE_ITEM,payload:id})
 }
 export const addItem=(item)=>dispatch=>{
-    axios.post('http://localhost:5000/api/items',item).then((res)=>{
+    axios.post('/api/items',item).then((res)=>{
     console.log(res.data);
     dispatch({
         type:ADD_ITEM,
@@ -20,7 +20,7 @@ export const addItem=(item)=>dispatch=>{
 })
 }
 export const setItemsLoading=()=>dispatch=>{
-    axios.get('http://localhost:5000/api/items').then(res=>{
+    axios.get('/api/items').then(res=>{
     dispatch(getItems(res.data));
     })
 }
